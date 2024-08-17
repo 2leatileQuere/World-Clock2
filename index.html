@@ -5,18 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/styles.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.37/moment-timezone-with-data-1970-2030.min.js"></script>
     <title>World Clock</title>
   </head>
   <body>
     <div class ="container"> 
     <h1>World Clock</h1>
 
-    <select>
+    <select id ="city">
       <option value="">select a city..</option>
-      <option value="">Paris</option>
-      <option value="">London</option>
-      <option value="">Gaborone</option>
+      <option value="Europe/Paris">Paris</option>
+      <option value="Europe/London">London</option>
+      <option value="Africa/Pretoria">Pretoria</option>
     </select>
+
+<div id ="cities"> 
 
   <div class="city" id ="Gaborone">
     <div>
@@ -42,6 +45,6 @@
         >open sourced on GitHub</a
       >
     </footer>
-    <script src= "index.js"></script>
+    <script src= "javascript.index.js"></script>
   </body>
 </html>
