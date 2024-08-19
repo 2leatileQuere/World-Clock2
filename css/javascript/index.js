@@ -1,8 +1,8 @@
 function updateTime() {
   // Gaborone
-  let GaboroneElemet = document.querySelector("#gaborone");
-  let GaboroneDateElement = GaboroneElemet.querySelector(".date");
-  let GaboroneTimeElement = GaboroneElemet.querySelector(".time");
+  let GaboroneElement = document.querySelector("#gaborone");
+  let GaboroneDateElement = GaboroneElement.querySelector(".date");
+  let GaboroneTimeElement = GaboroneElement.querySelector(".time");
   let GaboroneTime = moment().tz("Botswana/Gaborone");
 
   GaboroneDateElement.innerHTML = GaboroneTime.format("MMMM Do YYYY");
@@ -11,13 +11,36 @@ function updateTime() {
   );
 
   // Cape Town
-  let CapeTownElemet = document.querySelector("#gaborone");
-  let CapeTownDateElement = GaboroneElemet.querySelector(".date");
-  let CapeTownTimeElement = GaboroneElemet.querySelector(".time");
-  let CapeTownTime = moment().tz("Botswana/Gaborone");
+  let CapeTownElement = document.querySelector("#Capetown");
+  let CapeTownDateElement = CapeTownElement.querySelector(".date");
+  let CapeTownTimeElement = CapeTownElement.querySelector(".time");
+  let CapeTownTime = moment().tz("South Africa/CapeTown");
 
-  CapeTownDateElement.innerHTML = GaboroneTime.format("MMMM Do YYYY");
-  CapeTownTimeElement.innerHTML = GaboroneTime.format(
+  CapeTownDateElement.innerHTML = CapeTownTime.format("MMMM Do YYYY");
+  CapeTownTimeElement.innerHTML = CapeTownTime.format(
+    "h:mm:ss [<small>]A[/small>]"
+  );
+
+
+  // Monaco
+  let MonacoElement = document.querySelector("#Monaco");
+  let MonacoDateElement = MonacoElement.querySelector(".date");
+  let MonacoTimeElement = MonacoElement.querySelector(".time");
+  let MonacoTime = moment().tz("Monaco/Monaco");
+
+  MonacoDateElement.innerHTML = MonacoTime.format("MMMM Do YYYY");
+  MonacoTimeElement.innerHTML = MonacoTime.format(
+    "h:mm:ss [<small>]A[/small>]"
+  );
+
+    //
+  let AbuDhabiElement = document.querySelector("#AbuDhabi");
+  let AbuDhabiElement = AbuDhabiElement.querySelector(".date");
+  let AbuDhabiTimeElement = AbuDhabiElement.querySelector(".time");
+  let AbuDhabiTime = moment().tz("United Arab Emirates/Abu Dhabi");
+
+  AbuDhabiDateElement.innerHTML = AbuDhabiTime.format("MMMM Do YYYY");
+  AbuDhabiTimeElement.innerHTML = AbuDhabiTime.format(
     "h:mm:ss [<small>]A[/small>]"
   );
 }
