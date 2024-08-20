@@ -33,7 +33,7 @@ function updateTime() {
     "h:mm:ss [<small>]A[/small>]"
   );
 
-    //
+    //Abu Dhabi
   let AbuDhabiElement = document.querySelector("#AbuDhabi");
   let AbuDhabiElement = AbuDhabiElement.querySelector(".date");
   let AbuDhabiTimeElement = AbuDhabiElement.querySelector(".time");

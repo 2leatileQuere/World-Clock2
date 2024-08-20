@@ -63,7 +63,7 @@ select {
   line-height: 48px;
 }
 footer {
-  text-align: center;
+  text-align: justify;
   font-size: 13px;
   color: rgba(0, 0, 0, 0.6);
 }
