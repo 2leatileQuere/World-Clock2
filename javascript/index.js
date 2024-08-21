@@ -1,53 +1,53 @@
 function updateTime() {
   // Gaborone
-  let GaboroneElement = document.querySelector("#gaborone");
+  let gaboroneElement = document.querySelector("#gaborone");
   if (gaboroneElement) {
     let gaboroneDateElement = gaboroneElement.querySelector(".date");
     let gaboroneTimeElement = gaboroneElement.querySelector(".time");
-    let gaboroneTime = moment().tz("Botswana/Gaborone");
+    let gaboroneTime = moment().tz("Africa/Gaborone");
 
     gaboroneDateElement.innerHTML = gaboroneTime.format("MMMM Do YYYY");
     gaboroneTimeElement.innerHTML = gaboroneTime.format(
-      "h:mm:ss [<small>]A[/small>]"
+      "h:mm:ss [<small>]A[</small>]"
     );
   }
 
   // Cape Town
-  let CapeTownElement = document.querySelector("#Capetown");
-  if (capetownElement) {
-    let CapeTownDateElement = CapeTownElement.querySelector(".date");
-    let CapeTownTimeElement = CapeTownElement.querySelector(".time");
-    let CapeTownTime = moment().tz("South Africa/CapeTown");
+  let capeTownElement = document.querySelector("#cape-town");
+  if (capeTownElement) {
+    let capeTownDateElement = capeTownElement.querySelector(".date");
+    let capeTownTimeElement = capeTownElement.querySelector(".time");
+    let capeTownTime = moment().tz("Africa/Gaborone");
 
-    CapeTownDateElement.innerHTML = CapeTownTime.format("MMMM Do YYYY");
-    CapeTownTimeElement.innerHTML = CapeTownTime.format(
-      "h:mm:ss [<small>]A[/small>]"
+    capeTownDateElement.innerHTML = capeTownTime.format("MMMM Do YYYY");
+    capeTownTimeElement.innerHTML = capeTownTime.format(
+      "h:mm:ss [<small>]A[</small>]"
     );
   }
 
   // Monaco
-  let MonacoElement = document.querySelector("#Monaco");
-  if (MonacoElement) {
-    let MonacoDateElement = MonacoElement.querySelector(".date");
-    let MonacoTimeElement = MonacoElement.querySelector(".time");
-    let MonacoTime = moment().tz("Monaco/Monaco");
+  let monacoElement = document.querySelector("#monaco");
+  if (monacoElement) {
+    let monacoDateElement = monacoElement.querySelector(".date");
+    let monacoTimeElement = monacoElement.querySelector(".time");
+    let monacoTime = moment().tz("Europe/Monaco");
 
-    MonacoDateElement.innerHTML = MonacoTime.format("MMMM Do YYYY");
-    MonacoTimeElement.innerHTML = MonacoTime.format(
-      "h:mm:ss [<small>]A[/small>]"
+    monacoDateElement.innerHTML = monacoTime.format("MMMM Do YYYY");
+    monacoTimeElement.innerHTML = monacoTime.format(
+      "h:mm:ss [<small>]A[</small>]"
     );
   }
 
   //Abu Dhabi
-  let AbuDhabiElement = document.querySelector("#AbuDhabi");
-  if (AbuDhabiElement) {
-    let AbuDhabiElement = AbuDhabiElement.querySelector(".date");
-    let AbuDhabiTimeElement = AbuDhabiElement.querySelector(".time");
-    let AbuDhabiTime = moment().tz("United Arab Emirates/Abu Dhabi");
+  let abuDhabiElement = document.querySelector("#abu-dhabi");
+  if (abuDhabiElement) {
+    let abuDhabiDateElement = abuDhabiElement.querySelector(".date");
+    let abuDhabiTimeElement = abuDhabiElement.querySelector(".time");
+    let abuDhabiTime = moment().tz("Asia/Dubai");
 
-    AbuDhabiDateElement.innerHTML = AbuDhabiTime.format("MMMM Do YYYY");
-    AbuDhabiTimeElement.innerHTML = AbuDhabiTime.format(
-      "h:mm:ss [<small>]A[/small>]"
+    abuDhabiDateElement.innerHTML = abuDhabiTime.format("MMMM Do YYYY");
+    abuDhabiTimeElement.innerHTML = abuDhabiTime.format(
+      "h:mm:ss [<small>]A[</small>]"
     );
   }
 }
@@ -57,7 +57,7 @@ function updateCity(event) {
     cityTimeZone = moment.tz.guess();
   }
   let cityName = cityTimeZone.replace("_", " ").split("/")[1];
-  letcityTime = moment().tz(cityTimeZone);
+  let cityTime = moment().tz(cityTimeZone);
   let citiesElement = document.querySelector("#cities");
   citiesElement.innerHTML = `
   <div class="city">

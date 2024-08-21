@@ -3,82 +3,224 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/styles.css" />
+    <!-- <link rel="stylesheet" href="css/styles.css" /> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.37/moment-timezone-with-data-1970-2030.js"></script>
     <title>World Clock</title>
+    <style>
+      body {
+        background-image: url(https://images.pexels.com/photos/1903702/pexels-photo-1903702.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+        background-size: cover;
+
+        background-color: blueviolet;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 700;
+        font-style: url
+          (
+            "https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Jost:ital,wght@0,100..900;1,100..900&family=Noto+Sans:wght@300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          );
+      }
+
+      h1 {
+        text-align: center;
+        font-family: sans-serif;
+        font-size: 36px;
+      }
+
+      h2 {
+        margin: 0 0 5px;
+        font-size: 20px;
+      }
+
+      select {
+        display: block;
+        width: 100%;
+        font-size: 16px;
+        border-radius: 4px;
+        padding: 10px;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 60px auto;
+        background-color: whitesmoke;
+        padding: 28px;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+        border-radius: 60px;
+      }
+      .city {
+        display: flex;
+        margin: 10px 0;
+        justify-content: space-between;
+        padding: 30px 0;
+        border-bottom: 1px dashed black;
+      }
+      .city:last-child {
+        border: none;
+      }
+      .date {
+        opacity: 0.7;
+      }
+      .time {
+        font-size: 30px;
+        font-weight: bold;
+      }
+      .time small {
+        font-size: 24px;
+        vertical-align: middle;
+        line-height: 30px;
+      }
+      footer {
+        text-align: center;
+        font-size: 20px;
+        color: white;
+      }
+    </style>
   </head>
   <body>
-    <div class ="container"> 
-    <h1>
-      <a href="/">World clock</a>
+    <div class="container">
+      <h1>
+        <a href="/">World clock</a>
       </h1>
 
-    <select id ="city">
-      <option value="">select a city..</option>
-      <option value="current">My current location</option>
-      <option value="Africa/Addis Ababa">Addis Ababa</option>
-      <option value="Asia/Beijing">Beijing</option>
-      <option value="Europe/Dublin">Dublin</option>
-      <option value="Africa/Windhoek">Windhoek</option>
-      <option value="Asia/Bangkok">Bangkok</option>
-      <option value="Europe/Oslo">Oslo</option>
-      <option value="Europe/London">London</option>
-      <option value="Africa/Pretoria">Pretoria</option>
+      <select id="city">
+        <option value="">select a city..</option>
+        <option value="current">My current location</option>
+        <option value="Africa/Addis_Ababa">Addis Ababa</option>
+        <option value="Asia/Hong_Kong">Beijing</option>
+        <option value="Europe/Dublin">Dublin</option>
+        <option value="Africa/Windhoek">Windhoek</option>
+        <option value="Asia/Bangkok">Bangkok</option>
+        <option value="Europe/Oslo">Oslo</option>
+        <option value="Europe/London">London</option>
+        <option value="Africa/Johannesburg">Pretoria</option>
+      </select>
 
-    </select>
+      <div id="cities">
+        <div class="city" id="gaborone">
+          <div>
+            <h2>Gaborone</h2>
+            <div class="date"></div>
+          </div>
+          <div class="time"></div>
+        </div>
 
-<div id ="cities"> 
+        <div class="city" id="cape-town">
+          <div>
+            <h2>Cape Town</h2>
+            <div class="date"></div>
+          </div>
+          <div class="time"></div>
+        </div>
 
-  <div class="city" id ="Gaborone">
-    <div>
-    <h2> Gaborone</h2>
-    <div class="date"></div>
+        <div class="city" id="monaco">
+          <div>
+            <h2>Monaco</h2>
+            <div class="date"></div>
+          </div>
+          <div class="time"></div>
+        </div>
+
+        <div class="city" id="abu-dhabi">
+          <div>
+            <h2>Abu Dhabi</h2>
+            <div class="date"></div>
+          </div>
+          <div class="time"></div>
+        </div>
+      </div>
     </div>
-    <div class="time"></div>
-  </div>
-
-
-  <div class="city" id ="Cape Town">
-    <div>
-    <h2> Cape Town</h2>
-    <div class="date"></div>
-    </div>
-    <div class="time"></div>
-  </div>
-  
-<div class="city" id ="Monaco">
-    <div>
-    <h2> Monaco</h2>
-    <div class="date"></div>
-    </div>
-    <div class="time"></div>
-  </div>
-
-  <div class="city" id ="Abu Dhabi">
-    <div>
-    <h2> Abu Dhabi</h2>
-    <div class="date"></div>
-    </div>
-    <div class="time"></div>
-  </div>
-    
-     <footer>
-      This project was coded by <strong>Leatile Quere </strong> 
-
-      <a href="https://github.com/2leatileQuere/World-Clock2" 
-      target="_blank"
-      > and is 
-      <a href="https://github.com/2leatileQuere?tab=repositories"
-      target="_blank"
+    <footer>
+      This project is coded by <strong>Leatile Quere</strong> and is
+      <a href="https://github.com/2leatileQuere/World-Clock2"
         >open sourced on GitHub</a
       >
-    and
-    <a href="https://world-clockproject2.netlify.app/" target="_blank"
-    >hosted on Netlify</a>
-    
+      and hosted on
+      <a href="https://world-clockproject2.netlify.app/">Netlify</a>
     </footer>
-    <script src= "javascript/index.js">
+    <script>
+      function updateTime() {
+        // Gaborone
+        let gaboroneElement = document.querySelector("#gaborone");
+        if (gaboroneElement) {
+          let gaboroneDateElement = gaboroneElement.querySelector(".date");
+          let gaboroneTimeElement = gaboroneElement.querySelector(".time");
+          let gaboroneTime = moment().tz("Africa/Gaborone");
+
+          gaboroneDateElement.innerHTML = gaboroneTime.format("MMMM Do YYYY");
+          gaboroneTimeElement.innerHTML = gaboroneTime.format(
+            "h:mm:ss [<small>]A[</small>]"
+          );
+        }
+
+        // Cape Town
+        let capeTownElement = document.querySelector("#cape-town");
+        if (capeTownElement) {
+          let capeTownDateElement = capeTownElement.querySelector(".date");
+          let capeTownTimeElement = capeTownElement.querySelector(".time");
+          let capeTownTime = moment().tz("Africa/Gaborone");
+
+          capeTownDateElement.innerHTML = capeTownTime.format("MMMM Do YYYY");
+          capeTownTimeElement.innerHTML = capeTownTime.format(
+            "h:mm:ss [<small>]A[</small>]"
+          );
+        }
+
+        // Monaco
+        let monacoElement = document.querySelector("#monaco");
+        if (monacoElement) {
+          let monacoDateElement = monacoElement.querySelector(".date");
+          let monacoTimeElement = monacoElement.querySelector(".time");
+          let monacoTime = moment().tz("Europe/Monaco");
+
+          monacoDateElement.innerHTML = monacoTime.format("MMMM Do YYYY");
+          monacoTimeElement.innerHTML = monacoTime.format(
+            "h:mm:ss [<small>]A[</small>]"
+          );
+        }
+
+        //Abu Dhabi
+        let abuDhabiElement = document.querySelector("#abu-dhabi");
+        if (abuDhabiElement) {
+          let abuDhabiDateElement = abuDhabiElement.querySelector(".date");
+          let abuDhabiTimeElement = abuDhabiElement.querySelector(".time");
+          let abuDhabiTime = moment().tz("Asia/Dubai");
+
+          abuDhabiDateElement.innerHTML = abuDhabiTime.format("MMMM Do YYYY");
+          abuDhabiTimeElement.innerHTML = abuDhabiTime.format(
+            "h:mm:ss [<small>]A[</small>]"
+          );
+        }
+      }
+      function updateCity(event) {
+        let cityTimeZone = event.target.value;
+        if (cityTimeZone === "current") {
+          cityTimeZone = moment.tz.guess();
+        }
+        let cityName = cityTimeZone.replace("_", " ").split("/")[1];
+        let cityTime = moment().tz(cityTimeZone);
+        let citiesElement = document.querySelector("#cities");
+        citiesElement.innerHTML = `
+  <div class="city">
+  <div>
+  <h2>${cityName}</h2>
+  <div class="date">${cityTime.format("MMMM Do YYYY")}</div>
+  </div>
+  <div class="time">${cityTime.format("h:mm:ss")} <small>${cityTime.format(
+          "A"
+        )}</small></div>
+    </div>
+    <a href="/">All cities</a>
+    `;
+      }
+
+      updateTime();
+      setInterval(updateTime, 1000);
+
+      let citiesSelectElement = document.querySelector("#city");
+      citiesSelectElement.addEventListener("change", updateCity);
     </script>
+
+    <!-- <script src="javascript/index.js"></script> -->
   </body>
 </html>
