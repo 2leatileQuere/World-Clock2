@@ -105,9 +105,9 @@
           <div class="time"></div>
         </div>
 
-        <div class="city" id="cape-town">
+        <div class="city" id="cancun">
           <div>
-            <h2>Cape Town</h2>
+            <h2>Cancun</h2>
             <div class="date"></div>
           </div>
           <div class="time"></div>
@@ -153,15 +153,15 @@
           );
         }
 
-        // Cape Town
-        let capeTownElement = document.querySelector("#cape-town");
-        if (capeTownElement) {
-          let capeTownDateElement = capeTownElement.querySelector(".date");
-          let capeTownTimeElement = capeTownElement.querySelector(".time");
-          let capeTownTime = moment().tz("Africa/Gaborone");
+        // Cancun
+        let cancunElement = document.querySelector("#cancun");
+        if (cancunElement) {
+          let cancunDateElement = cancunElement.querySelector(".date");
+          let cancunTimeElement = cancunElement.querySelector(".time");
+          let cancunTime = moment().tz("north america/cancun");
 
-          capeTownDateElement.innerHTML = capeTownTime.format("MMMM Do YYYY");
-          capeTownTimeElement.innerHTML = capeTownTime.format(
+          cancunDateElement.innerHTML = cancunTime.format("MMMM Do YYYY");
+          cancunTimeElement.innerHTML = cancunTime.format(
             "h:mm:ss [<small>]A[</small>]"
           );
         }
